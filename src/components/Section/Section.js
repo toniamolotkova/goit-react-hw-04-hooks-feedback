@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from './Section.module.css';
 
 import React from 'react';
@@ -9,6 +10,11 @@ function Section({ title, children }) {
       {children}
     </section>
   );
+}
+
+Section.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node, 
 }
 
 export default Section;
